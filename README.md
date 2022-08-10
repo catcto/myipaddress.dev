@@ -39,3 +39,10 @@ $ curl myipaddress.dev/json
   }
 }
 ```
+
+This information is provided from the GeoLite2 database created by MaxMind, available from https://www.maxmind.com
+
+## Getting started
+https://myipaddress.dev website is build by echoip, A simple service for looking up your IP address. 
+- Run echoip with Docker Compose `docker-compose up -d`
+- The echoip source code and documentation is available on https://github.com/mpolden/echoip
