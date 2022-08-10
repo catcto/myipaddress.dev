@@ -1,6 +1,12 @@
 # myipaddress-web
 The best tool to find your own IP address, and information about it.
 
+## Getting started
+https://myipaddress.dev website is build by echoip, a simple service for looking up your IP address. 
+- Download GeoIP Databases by MaxMind: `GeoLite2-Country.mmdb` `GeoLite2-ASN.mmdb` `GeoLite2-City.mmdb`
+- Run echoip with Docker Compose `docker-compose up -d`
+- The echoip source code and documentation is available on https://github.com/mpolden/echoip
+
 ## Usage
 
 ```
@@ -41,9 +47,3 @@ $ curl myipaddress.dev/json
 ```
 
 This information is provided from the GeoLite2 database created by MaxMind, available from https://www.maxmind.com
-
-## Getting started
-https://myipaddress.dev website is build by echoip, A simple service for looking up your IP address. 
-- Download GeoIP Databases by MaxMind: `GeoLite2-Country.mmdb` `GeoLite2-ASN.mmdb` `GeoLite2-City.mmdb`
-- Run echoip with Docker Compose `docker-compose up -d`
-- The echoip source code and documentation is available on https://github.com/mpolden/echoip
