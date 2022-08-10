@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  gost:
+    image: mpolden/echoip
+    container_name: echoip
+    network_mode: "host"
+    restart: always
+    volumes:
+      - ./GeoLite2-City.mmdb:/opt/echoip/GeoLite2-City.mmdb
+      - ./GeoLite2-ASN.mmdb:/opt/echoip/GeoLite2-ASN.mmdb
+      - ./GeoLite2-Country.mmdb:/opt/echoip/GeoLite2-Country.mmdb
+    command: ["-c", "/opt/echoip/GeoLite2-City.mmdb", "-a", "/opt/echoip/GeoLite2-ASN.mmdb", "-f", "/opt/echoip/GeoLite2-Country.mmdb", "-r" ,"-p", "-H=CF-Connecting-IP"]
